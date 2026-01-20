@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="UniversityVotingSystem.Site" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+        <!-- Add Favicon -->
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3037/3037142.png" />
+    
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+    
+    <!-- Your existing styles -->
+    <title>University Voting System</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .header { 
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white; 
+            padding: 30px; 
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 { 
+            margin-bottom: 10px; 
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p { 
+            font-size: 1.1em; 
+            opacity: 0.9;
+        }
+        .nav { 
+            background: rgba(255,255,255,0.95); 
+            padding: 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav a { 
+            color: #1e3c72; 
+            padding: 15px 25px; 
+            text-decoration: none; 
+            display: inline-block;
+            font-weight: 500;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        .nav a:hover { 
+            background: #667eea;
+            color: white;
+            border-bottom: 3px solid #2a5298;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 30px auto; 
+            padding: 30px; 
+            background: white; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            min-height: 500px;
+        }
+        .footer { 
+            background: rgba(30, 60, 114, 0.9);
+            color: white; 
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 30px;
+        }
+        h2 { 
+            color: #1e3c72; 
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <h1>🗳️ University Online Voting System</h1>
+            <p>Secure, Transparent & Democratic Elections</p>
+        </div>
+        
+        <div class="nav">
+            <a href="Default.aspx">🏠 Home</a>
+            <a href="UserLogin.aspx">🔐 User Login</a>
+            <a href="UserRegister.aspx">📝 Register</a>
+            <a href="AdminLogin.aspx">👨‍💼 Admin Login</a>
+        </div>
+        
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 University Voting System. All Rights Reserved.</p>
+            <p style="margin-top: 5px; font-size: 0.9em;">Empowering Student Democracy</p>
+        </div>
+    </form>
+</body>
+</html>
